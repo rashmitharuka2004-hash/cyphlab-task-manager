@@ -9,13 +9,13 @@ A modular, decoupled project and team task management suite engineered with a ro
 Here is a visual overview of the operational workspace matrices across individual system authentication clearances:
 
 ### 1. Admin Control Console
-![Admin Console View](./frontend/public/screenshots/admin.png)
+![Admin Console View](./screenshots/admin.png)
 
 ### 2. Project Operations Suite (Manager Deck)
-![Manager Project View](./frontend/public/screenshots/manager.png)
+![Manager Project View](./screenshots/manager.png)
 
 ### 3. Team Member Kanban Deck
-![Member Board View](./frontend/public/screenshots/member.png)
+![Member Board View](./screenshots/member.png)
 
 ## 🚀 Quick Setup & Installation Guide
 
