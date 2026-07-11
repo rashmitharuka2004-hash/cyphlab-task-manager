@@ -1,0 +1,31 @@
+name: Continuous Integration Architecture Check
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  frontend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Node.js Dependencies
+        run: |
+          cd frontend
+          npm install
+          npm run build
+
+  backend-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup PHP Environment
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+      - name: Verify Composer Syntax
+        run: |
+          cd backend
+          composer validate
