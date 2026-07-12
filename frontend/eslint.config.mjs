@@ -13,11 +13,8 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
-      // Bypasses the strict plugin checks for state updates inside useEffect
       "react-hooks/set-state-in-effect": "off",
-      // Turns off the explicit type matching requirements for 'any' types
       "@typescript-eslint/no-explicit-any": "off",
-      // Downgrades unused variable blockers into standard visual warnings
       "@typescript-eslint/no-unused-vars": "warn",
     }
   }
