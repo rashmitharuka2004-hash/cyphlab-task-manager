@@ -37,5 +37,5 @@ jobs:
       - name: Verify Build Output
         run: |
           cd frontend
-          # Force Next.js production compiler to skip lint validations in CI shell
-          NEXT_TELEMETRY_DISABLED=1 npx next build --no-lint
+          # Correct Next.js environment variables to bypass linting and telemetry checks during CI build
+          NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 npx next build
